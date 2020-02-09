@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class Client {
     public static void main(String[] args) throws IOException {
-        Socket clientSocket = new Socket("127.0.0.1", 8000);
+        Socket clientSocket = new Socket("127.0.0.1", 8080);
 
         OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
         BufferedReader reader = new BufferedReader(
@@ -32,12 +32,16 @@ public class Client {
             writer.write(num2 + "\n");
             writer.flush();
 
-            quotient = Integer.parseInt(reader.readLine());
-            remainder = Integer.parseInt(reader.readLine());
+            try {
+                quotient = Integer.parseInt(reader.readLine());
+                remainder = Integer.parseInt(reader.readLine());
 
-            System.out.println("получен результат деления .... " + quotient);
-            System.out.println("получен остаток от деления ... " + remainder);
-            System.out.println();
+                System.out.println("получен результат деления .... " + quotient);
+                System.out.println("получен остаток от деления ... " + remainder);
+                System.out.println();
+            } catch (Exception exc) {
+                System.out.println(exc.getMessage());
+            }
         }
     }
 }

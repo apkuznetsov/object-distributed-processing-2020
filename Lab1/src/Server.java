@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8000);
+        ServerSocket serverSocket = new ServerSocket(8080);
         Socket clientSocket = serverSocket.accept();
 
         OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
@@ -28,16 +28,23 @@ public class Server {
             System.out.println("получен делитель ............. " + num2);
             System.out.println();
 
-            quotient = num1 / num2;
-            System.out.println("результат деления ............ " + quotient);
+            if (num2 != 0) {
+                quotient = num1 / num2;
+                System.out.println("результат деления ............ " + quotient);
 
-            remainder = num1 % num2;
-            System.out.println("остаток от деления ........... " + remainder);
-            System.out.println();
+                remainder = num1 % num2;
+                System.out.println("остаток от деления ........... " + remainder);
 
-            writer.write(quotient + "\n");
-            writer.write(remainder + "\n");
+                writer.write(quotient + "\n");
+                writer.write(remainder + "\n");
+            } else {
+                String response = "операция невозможна: деление на ноль";
+                System.out.println(response);
+
+                writer.write(response + "\n");
+            }
             writer.flush();
+            System.out.println();
         }
     }
 }
