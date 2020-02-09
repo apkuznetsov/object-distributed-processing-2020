@@ -8,49 +8,36 @@ import java.net.Socket;
 public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(8000);
+        Socket clientSocket = serverSocket.accept();
+
+        OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
+
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(clientSocket.getInputStream()));
 
         int num1;
         int num2;
         int quotient;
         int remainder;
 
-        int count = 0;
         while (true) {
-            Socket clientSocket = serverSocket.accept();
-            System.out.println("клиент подключён " + (++count));
-            OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
-            //
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(
-                            clientSocket.getInputStream()));
-            //
-            //
-            //
-            //
-            //
             num1 = Integer.parseInt(reader.readLine());
-            System.out.println("получено число ....... " + num1);
-            //
-            //
+            System.out.println("получено число ............... " + num1);
+
             num2 = Integer.parseInt(reader.readLine());
-            System.out.println("получен делитель ..... " + num2);
-            //
+            System.out.println("получен делитель ............. " + num2);
+            System.out.println();
+
             quotient = num1 / num2;
-            System.out.println("результат деления .... " + quotient);
-            //
+            System.out.println("результат деления ............ " + quotient);
+
             remainder = num1 % num2;
-            System.out.println("остаток от деления ... " + remainder);
-            //
-            writer.write(quotient + '\n');
-            writer.write(remainder + '\n');
+            System.out.println("остаток от деления ........... " + remainder);
+            System.out.println();
+
+            writer.write(quotient + "\n");
+            writer.write(remainder + "\n");
             writer.flush();
-            //
-            //
-            //
-            //
-            writer.close();
-            reader.close();
-            clientSocket.close();
         }
     }
 }

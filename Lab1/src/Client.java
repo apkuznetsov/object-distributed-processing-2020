@@ -4,53 +4,40 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 
-
 public class Client {
     public static void main(String[] args) throws IOException {
         Socket clientSocket = new Socket("127.0.0.1", 8000);
-        //
+
+        OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(clientSocket.getInputStream()));
+
+        BufferedReader keyboardReader = new BufferedReader(
+                new InputStreamReader(System.in));
+
         int num1;
         int num2;
         int quotient;
         int remainder;
-        //
-        //
-        while (true) {
-            OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
-            //
-            //
-            //
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(
-                            clientSocket.getInputStream()));
 
-            BufferedReader keyboardReader = new BufferedReader(
-                    new InputStreamReader(System.in));
-            //
-            System.out.println("введите число ....... ");
+        while (true) {
+            System.out.println("введите число ................ ");
             num1 = Integer.parseInt(keyboardReader.readLine());
-            //
-            //
-            System.out.println("введите делитель .... ");
+
+            System.out.println("введите делитель ............. ");
             num2 = Integer.parseInt(keyboardReader.readLine());
-            keyboardReader.close();
-            //
-            writer.write(num1 + '\n');
-            writer.write(num2 + '\n');
+            System.out.println();
+
+            writer.write(num1 + "\n");
+            writer.write(num2 + "\n");
             writer.flush();
-            //
-            //
-            //
-            //
+
             quotient = Integer.parseInt(reader.readLine());
             remainder = Integer.parseInt(reader.readLine());
-            //
+
             System.out.println("получен результат деления .... " + quotient);
             System.out.println("получен остаток от деления ... " + remainder);
-            //
-            writer.close();
-            reader.close();
-            clientSocket.close();
+            System.out.println();
         }
     }
 }
