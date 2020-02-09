@@ -20,28 +20,31 @@ public class Client {
         int quotient;
         int remainder;
 
-        while (true) {
-            System.out.println("введите число ................ ");
-            num1 = Integer.parseInt(keyboardReader.readLine());
+        System.out.println("введите число ................ ");
+        num1 = Integer.parseInt(keyboardReader.readLine());
 
-            System.out.println("введите делитель ............. ");
-            num2 = Integer.parseInt(keyboardReader.readLine());
+        System.out.println("введите делитель ............. ");
+        num2 = Integer.parseInt(keyboardReader.readLine());
+        System.out.println();
+
+        writer.write(num1 + "\n");
+        writer.write(num2 + "\n");
+        writer.flush();
+
+        try {
+            quotient = Integer.parseInt(reader.readLine());
+            remainder = Integer.parseInt(reader.readLine());
+
+            System.out.println("получен результат деления .... " + quotient);
+            System.out.println("получен остаток от деления ... " + remainder);
             System.out.println();
-
-            writer.write(num1 + "\n");
-            writer.write(num2 + "\n");
-            writer.flush();
-
-            try {
-                quotient = Integer.parseInt(reader.readLine());
-                remainder = Integer.parseInt(reader.readLine());
-
-                System.out.println("получен результат деления .... " + quotient);
-                System.out.println("получен остаток от деления ... " + remainder);
-                System.out.println();
-            } catch (Exception exc) {
-                System.out.println(exc.getMessage());
-            }
+        } catch (Exception exc) {
+            System.out.println(exc.getMessage());
         }
+
+        keyboardReader.close();
+        reader.close();
+        writer.close();
+        clientSocket.close();
     }
 }

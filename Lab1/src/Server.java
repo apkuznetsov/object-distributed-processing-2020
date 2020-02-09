@@ -8,12 +8,6 @@ import java.net.Socket;
 public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(8080);
-        Socket clientSocket = serverSocket.accept();
-
-        OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
-
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(clientSocket.getInputStream()));
 
         int num1;
         int num2;
@@ -21,6 +15,13 @@ public class Server {
         int remainder;
 
         while (true) {
+            Socket clientSocket = serverSocket.accept();
+
+            OutputStreamWriter writer = new OutputStreamWriter(clientSocket.getOutputStream());
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(clientSocket.getInputStream()));
+
             num1 = Integer.parseInt(reader.readLine());
             System.out.println("получено число ............... " + num1);
 
