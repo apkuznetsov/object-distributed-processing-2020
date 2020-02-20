@@ -3,7 +3,7 @@ package com.company;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface RemoteInterface extends Remote {
+public interface CircleMath extends Remote {
     double calcSegmentLen(Point p1, Point p2) throws RemoteException;
 
     double calcCircleLen(Point centerPoint, Point radiusPoint) throws RemoteException;
