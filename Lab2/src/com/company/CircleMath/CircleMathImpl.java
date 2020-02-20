@@ -5,7 +5,7 @@ import java.rmi.RemoteException;
 import static java.lang.Math.*;
 
 public class CircleMathImpl implements CircleMath {
-    protected CircleMathImpl() throws RemoteException {
+    public CircleMathImpl() throws RemoteException {
     }
 
     @Override
