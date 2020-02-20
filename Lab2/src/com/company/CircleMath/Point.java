@@ -1,4 +1,4 @@
-package com.company;
+package com.company.CircleMath;
 
 import java.io.Serializable;
 

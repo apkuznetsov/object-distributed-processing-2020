@@ -1,7 +1,6 @@
-package com.company;
+package com.company.CircleMath;
 
 import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
 
 import static java.lang.Math.*;
 
