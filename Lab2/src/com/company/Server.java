@@ -1,37 +1,32 @@
 package com.company;
 
-import java.rmi.RemoteException;
+import java.rmi.Remote;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 
-import static java.lang.Math.*;
-
-public class Server implements RemoteInterface {
+public class Server {
+    public static final String BINDING_NAME = "circlemath";
 
     public static void main(String[] args) {
+        try {
+            // создание объекта для удалённого доступа
+            final CircleMathImpl service = new CircleMathImpl();
 
-    }
+            // создание реестра расшаренных объектов
+            final Registry registry = LocateRegistry.createRegistry(2099);
 
-    @Override
-    public double calcSegmentLen(Point p1, Point p2) throws RemoteException {
-        return sqrt(pow(p2.getX() - p1.getX(), 2) + pow(p2.getY() - p1.getY(), 2));
-    }
+            // создание "заглушки" -– приёмника удалённых вызовов
+            Remote stub = UnicastRemoteObject.exportObject(service, 0);
 
-    @Override
-    public double calcCircleLen(Point centerPoint, Point lastRadiusPoint) throws RemoteException {
-        return 2 * PI * calcSegmentLen(centerPoint, lastRadiusPoint);
-    }
+            // регистрация "заглушки" в реестре
+            registry.bind(BINDING_NAME, stub);
 
-    @Override
-    public double calcCircleArea(Point centerPoint, Point lastRadiusPoint) throws RemoteException {
-        return PI * pow(calcSegmentLen(centerPoint, lastRadiusPoint), 2);
-    }
-
-    @Override
-    public double calcCircleLenByDiameter(Point p1, Point p2) throws RemoteException {
-        return PI * calcSegmentLen(p1, p2);
-    }
-
-    @Override
-    public double calcCircleAreaByDiameter(Point p1, Point p2) throws RemoteException {
-        return PI * (calcSegmentLen(p1, p2) / 4);
+            // усыпляем главный поток, иначе программа завершится
+            Thread.sleep(Integer.MAX_VALUE);
+        } catch (Exception exc) {
+            System.out.println(exc.getMessage());
+            exc.printStackTrace();
+        }
     }
 }
