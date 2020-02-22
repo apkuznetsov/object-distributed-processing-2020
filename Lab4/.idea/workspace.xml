@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b69cfb-4e42-443d-8e9e-e3ee212b699d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/AbstractDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/DaoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/HsqldbDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/HsqldbDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/MainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/Daos/PharmacyDbDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorSpecializationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorSpecializationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbMedicalPrescriptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbMedicalPrescriptionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPatientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Designer2Companion" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,12 +56,9 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\sql-scripts" />
-      <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\" />
-      <recent name="D:\repos\test-task\sql-scripts\doctor-specialization" />
-      <recent name="D:\repos\test-task\sql-scripts\medical-prescription" />
-      <recent name="D:\repos\test-task\sql-scripts\patient" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.haulmont.testtask.PharmacyUi" />
+      <recent name="com.haulmont.testtask" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.haulmont.testtask" />
@@ -75,9 +75,12 @@
       <recent name="com.haulmont.testtask.PharmacyUi.Windows" />
       <recent name="com.haulmont.testtask.PharmacyDb.HsqldbDaos" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.haulmont.testtask.PharmacyUi" />
-      <recent name="com.haulmont.testtask" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\sql-scripts" />
+      <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\" />
+      <recent name="D:\repos\test-task\sql-scripts\doctor-specialization" />
+      <recent name="D:\repos\test-task\sql-scripts\medical-prescription" />
+      <recent name="D:\repos\test-task\sql-scripts\patient" />
     </key>
   </component>
   <component name="RunAnythingCache">

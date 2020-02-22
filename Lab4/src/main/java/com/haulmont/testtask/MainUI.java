@@ -1,7 +1,8 @@
 package com.haulmont.testtask;
 
-import com.haulmont.testtask.PharmacyDb.Daos.PharmacyDbDao;
+import com.haulmont.testtask.PharmacyDb.PharmacyDbDao;
 import com.haulmont.testtask.PharmacyDb.HsqldbDaos.HsqldbPharmacyDbDao;
+import com.haulmont.testtask.PharmacyDb.PharmacyDbDaoFactory;
 import com.haulmont.testtask.PharmacyUi.*;
 import com.vaadin.annotations.Theme;
 import com.vaadin.navigator.Navigator;
@@ -14,7 +15,7 @@ public class MainUI extends UI {
     private static final String DB_URL = "jdbc:hsqldb:file:testdb";
     private static final String USER = "SA";
     private static final String PASSWORD = "";
-    public static PharmacyDbDao pharmacyDbDao = new HsqldbPharmacyDbDao(DB_URL, USER, PASSWORD);
+    public static PharmacyDbDao pharmacyDbDao = PharmacyDbDaoFactory.createInstance(DB_URL, USER, PASSWORD);
 
     private static final String PATIENT_VIEW = "Пациенты";
     private static final String DOCTOR_VIEW = "Врачи";
