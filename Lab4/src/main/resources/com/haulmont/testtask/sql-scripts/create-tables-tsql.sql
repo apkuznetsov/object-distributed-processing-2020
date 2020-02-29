@@ -176,3 +176,20 @@ CREATE TRIGGER updating_medical_prescription
         UPDATE medical_prescription SET doctor_id = (SELECT id FROM doctor WHERE id = @doctor_id) WHERE id = @id;
     END
 go
+
+CREATE TRIGGER deleting_patient
+    ON patient
+    FOR DELETE
+    AS
+    BEGIN
+        DECLARE
+		@id	BIGINT;
+
+		SELECT
+		@id	= id
+		FROM DELETED;
+
+        IF EXISTS(select patient_id from medical_prescription where patient_id = @id)
+            THROW 00000, 'cannot delete patient because he has a medical prescription', 0;
+    END
+go
