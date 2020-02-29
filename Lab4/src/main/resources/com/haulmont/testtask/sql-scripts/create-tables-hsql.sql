@@ -1,8 +1,10 @@
-﻿CREATE TABLE doctor (
+﻿CREATE DATABASE Pharmacy;
+
+CREATE TABLE doctor (
   id BIGINT NOT NULL IDENTITY,
   forename VARCHAR(50) NOT NULL,
   patronymic VARCHAR(50) NOT NULL,
-  surname VARCHAR(50) NULL,
+  surname VARCHAR(50) NOT NULL,
   specialization_id BIGINT NOT NULL
 );
 

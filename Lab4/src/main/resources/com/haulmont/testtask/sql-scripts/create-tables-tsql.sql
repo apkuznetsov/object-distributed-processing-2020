@@ -65,7 +65,7 @@ ALTER TABLE  medical_prescription
     		ON UPDATE NO ACTION
 go
 
-CREATE trigger inserting_doctor
+CREATE TRIGGER inserting_doctor
     ON doctor
 	FOR UPDATE
 	AS
@@ -83,7 +83,7 @@ CREATE trigger inserting_doctor
 	END;
 go
 
-CREATE trigger updating_doctor
+CREATE TRIGGER updating_doctor
     ON doctor
     FOR UPDATE
     AS
