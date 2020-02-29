@@ -60,7 +60,7 @@ ALTER TABLE  medical_prescription
 go
 
 ALTER TABLE  medical_prescription
-    	ADD CONSTRAINT fk_doctor_id FOREIGN KEY (patient_id) REFERENCES doctor (id)
+    	ADD CONSTRAINT fk_doctor_id FOREIGN KEY (doctor_id) REFERENCES doctor (id)
     		ON DELETE NO ACTION
     		ON UPDATE NO ACTION
 go
