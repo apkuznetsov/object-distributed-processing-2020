@@ -1,3 +1,5 @@
+CREATE DATABASE Pharmacy;
+
 CREATE TABLE doctor (
   id BIGINT IDENTITY NOT NULL,
   forename VARCHAR(50) NOT NULL,
@@ -75,8 +77,26 @@ CREATE trigger inserting_doctor
 		SELECT
 		@id	= id,
 		@specialization_id = specialization_id
-		FROM INSERTED
+		FROM INSERTED;
 
         UPDATE doctor SET specialization_id = (SELECT id FROM doctor_specialization WHERE id = @specialization_id) WHERE id = @id;
 	END;
-GO
+go
+
+CREATE trigger updating_doctor
+    ON doctor
+    FOR UPDATE
+    AS
+    BEGIN
+        DECLARE
+		@id	BIGINT,
+		@specialization_id BIGINT;
+
+		SELECT
+		@id	= id,
+		@specialization_id = specialization_id
+		FROM INSERTED;
+
+        UPDATE doctor SET specialization_id = (SELECT id FROM doctor_specialization WHERE id = @specialization_id) WHERE id = @id;
+    END
+go
