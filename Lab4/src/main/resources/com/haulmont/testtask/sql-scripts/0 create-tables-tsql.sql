@@ -65,6 +65,42 @@ ALTER TABLE  medical_prescription
     		ON UPDATE NO ACTION
 go
 
+CREATE TRIGGER inserting_doctor
+    ON doctor
+	FOR UPDATE
+	AS
+	BEGIN
+		DECLARE
+		@id	BIGINT,
+		@specialization_id BIGINT;
+
+		SELECT
+		@id	= id,
+		@specialization_id = specialization_id
+		FROM INSERTED;
+
+        UPDATE doctor SET specialization_id = (SELECT id FROM doctor_specialization WHERE id = @specialization_id) WHERE id = @id;
+	END;
+go
+
+CREATE TRIGGER updating_doctor
+    ON doctor
+    FOR UPDATE
+    AS
+    BEGIN
+        DECLARE
+		@id	BIGINT,
+		@specialization_id BIGINT;
+
+		SELECT
+		@id	= id,
+		@specialization_id = specialization_id
+		FROM INSERTED;
+
+        UPDATE doctor SET specialization_id = (SELECT id FROM doctor_specialization WHERE id = @specialization_id) WHERE id = @id;
+    END
+go
+
 CREATE TRIGGER deleting_doctor
     ON doctor
 	FOR DELETE
@@ -96,6 +132,48 @@ CREATE TRIGGER deleting_doctor_specialization
 
         IF EXISTS(select specialization_id from doctor where specialization_id = @id)
             THROW 00000, 'cannot delete specialization because there is a doctor with such one', 0;
+    END
+go
+
+CREATE TRIGGER inserting_medical_prescription
+    ON medical_prescription
+    FOR UPDATE
+    AS
+    BEGIN
+        DECLARE
+		@id	BIGINT,
+		@patient_id	BIGINT,
+		@doctor_id BIGINT;
+
+		SELECT
+		@id	= id,
+		@patient_id	= patient_id,
+		@doctor_id = doctor_id
+		FROM INSERTED;
+
+        UPDATE medical_prescription SET patient_id = (SELECT id FROM patient WHERE id = @patient_id) WHERE id = @id;
+        UPDATE medical_prescription SET doctor_id = (SELECT id FROM doctor WHERE id = @doctor_id) WHERE id = @id;
+    END
+go
+
+CREATE TRIGGER updating_medical_prescription
+    ON medical_prescription
+    FOR UPDATE
+    AS
+    BEGIN
+        DECLARE
+		@id	BIGINT,
+		@patient_id	BIGINT,
+		@doctor_id BIGINT;
+
+		SELECT
+		@id	= id,
+		@patient_id	= patient_id,
+		@doctor_id = doctor_id
+		FROM INSERTED;
+
+        UPDATE medical_prescription SET patient_id = (SELECT id FROM patient WHERE id = @patient_id) WHERE id = @id;
+        UPDATE medical_prescription SET doctor_id = (SELECT id FROM doctor WHERE id = @doctor_id) WHERE id = @id;
     END
 go
 
