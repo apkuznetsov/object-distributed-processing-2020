@@ -100,3 +100,20 @@ CREATE trigger updating_doctor
         UPDATE doctor SET specialization_id = (SELECT id FROM doctor_specialization WHERE id = @specialization_id) WHERE id = @id;
     END
 go
+
+CREATE TRIGGER deleting_doctor
+    ON doctor
+	FOR DELETE
+    AS
+    BEGIN
+        DECLARE
+		@id	BIGINT;
+
+		SELECT
+		@id	= id
+		FROM DELETED;
+
+        IF EXISTS(select doctor_id from medical_prescription where doctor_id = @id)
+            THROW 00000, 'cannot delete doctor because he has a medical prescription', 0;
+    END
+go
