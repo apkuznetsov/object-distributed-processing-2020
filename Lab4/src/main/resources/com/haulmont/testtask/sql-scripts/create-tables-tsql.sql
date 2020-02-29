@@ -117,3 +117,20 @@ CREATE TRIGGER deleting_doctor
             THROW 00000, 'cannot delete doctor because he has a medical prescription', 0;
     END
 go
+
+CREATE TRIGGER deleting_doctor_specialization
+    ON doctor_specialization
+    FOR DELETE
+    AS
+    BEGIN
+        DECLARE
+		@id	BIGINT;
+
+		SELECT
+		@id	= id
+		FROM DELETED;
+
+        IF EXISTS(select specialization_id from doctor where specialization_id = @id)
+            THROW 00000, 'cannot delete specialization because there is a doctor with such one', 0;
+    END
+go
