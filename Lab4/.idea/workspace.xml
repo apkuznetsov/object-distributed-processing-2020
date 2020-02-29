@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63b69cfb-4e42-443d-8e9e-e3ee212b699d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/MainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/Daos/PharmacyDbDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorSpecializationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorSpecializationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbMedicalPrescriptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbMedicalPrescriptionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPatientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="test-task" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Designer2Companion" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Ws44EOVqbtofH3otesqIwCIsCn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.haulmont.testtask.PharmacyUi" />
+      <recent name="com.haulmont.testtask" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.haulmont.testtask" />
+      <recent name="com.haulmont.testtask.PharmacyDb" />
+      <recent name="com.haulmont.testtask.Pharmacy" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\repos\test-task\sql-scripts" />
+      <recent name="D:\repos\test-task\lib" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.haulmont.testtask.PharmacyUi" />
+      <recent name="com.haulmont.testtask.PharmacyDb.Dtos" />
+      <recent name="com.haulmont.testtask.PharmacyUi.Windows" />
+      <recent name="com.haulmont.testtask.PharmacyDb.HsqldbDaos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\sql-scripts" />
+      <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\" />
+      <recent name="D:\repos\test-task\sql-scripts\doctor-specialization" />
+      <recent name="D:\repos\test-task\sql-scripts\medical-prescription" />
+      <recent name="D:\repos\test-task\sql-scripts\patient" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="maven" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.test-task [jetty:run]">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.haulmont.testtask.Main" />
+      <module name="test-task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.haulmont.testtask.PharmacyDb.HsqldbDaos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test-task [jetty:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="test-task [jetty:start]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:start" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.test-task [jetty:run]" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Maven.test-task [jetty:start]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63b69cfb-4e42-443d-8e9e-e3ee212b699d" name="Default Changelist" comment="" />
+      <created>1579924777364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579924777364</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="659" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582382431694">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="659" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1582382431694" />
+    <state x="489" y="193" key="SettingsEditor" timestamp="1582380723517">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="489" y="193" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1582380723517" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Forms/Ui.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((HsqlName)((IndexAVL)((RowSetNavigatorData)((JDBCResultSet)resultSet).navigator).mainIndex).name).manager" custom="org.hsqldb.navigator.RowSetNavigatorData,org.hsqldb.jdbc.JDBCResultSet,org.hsqldb.index.IndexAVL,org.hsqldb.HsqlNameManager.HsqlName" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+    <option name="sizePresets">
+      <list>
+        <SizePreset>
+          <option name="caption" value="Phone" />
+          <option name="height" value="568" />
+          <option name="width" value="320" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Tablet" />
+          <option name="height" value="1024" />
+          <option name="width" value="768" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Desktop" />
+          <option name="height" value="900" />
+          <option name="width" value="1440" />
+        </SizePreset>
+      </list>
+    </option>
+  </component>
+</project>
