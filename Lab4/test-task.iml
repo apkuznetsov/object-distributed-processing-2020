@@ -21,7 +21,7 @@
     <orderEntry type="library" name="Maven: com.vaadin:vaadin-client-compiled:8.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.vaadin:vaadin-themes:8.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.4" level="project" />
-    <orderEntry type="library" name="Maven: org.hsqldb:hsqldb:2.5.0" level="project" />
+    <orderEntry type="library" name="Maven: com.microsoft.sqlserver:mssql-jdbc:8.2.0.jre11" level="project" />
   </component>
   <component name="designer2.settings">
     <option name="serverIp" value="10.0.0.20" />
