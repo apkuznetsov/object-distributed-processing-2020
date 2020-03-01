@@ -1,13 +1,13 @@
 package com.lab4.Dao;
 
 public abstract class DaoFactory {
-    public enum DaoTypes {MSSQL}
+    public enum DaoTypes {HSQLDB}
 
-    private static DaoTypes daoType = DaoTypes.MSSQL;
+    private static DaoTypes daoType = DaoTypes.HSQLDB;
 
     public static Dao createInstance(String dbUrl, String user, String password) {
         switch (daoType) {
-            case MSSQL:
+            case HSQLDB:
                 return new MssqlDao(dbUrl, user, password);
             default:
                 return null;
@@ -16,7 +16,7 @@ public abstract class DaoFactory {
 
     public static Dao createInstance(DaoTypes daoType, String dbUrl, String user, String password) {
         switch (daoType) {
-            case MSSQL:
+            case HSQLDB:
                 return new MssqlDao(dbUrl, user, password);
             default:
                 return null;
