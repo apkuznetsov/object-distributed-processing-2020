@@ -1,6 +1,6 @@
 package com.haulmont.testtask.PharmacyDb.HsqldbDaos;
 
-import com.haulmont.testtask.Dao.HsqldbDao;
+import com.haulmont.testtask.Dao.MssqlDao;
 import com.haulmont.testtask.Dao.SqlHelper;
 import com.haulmont.testtask.PharmacyDb.Daos.DoctorDao;
 import com.haulmont.testtask.PharmacyDb.Daos.MedicalPrescriptionDao;
@@ -16,8 +16,8 @@ import static com.haulmont.testtask.Dao.SqlHelper.*;
 import static com.haulmont.testtask.PharmacyDb.PharmacyDbDao.DOCTOR;
 import static com.haulmont.testtask.PharmacyDb.PharmacyDbDao.MEDICAL_PRESCRIPTION;
 
-public class HsqldbDoctorDao extends HsqldbDao implements DoctorDao {
-    public HsqldbDoctorDao(String dbUrl, String user, String password) {
+public class MssqlDoctorDao extends MssqlDao implements DoctorDao {
+    public MssqlDoctorDao(String dbUrl, String user, String password) {
         super(dbUrl, user, password);
     }
 

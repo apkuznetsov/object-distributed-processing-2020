@@ -8,7 +8,7 @@ public abstract class DaoFactory {
     public static Dao createInstance(String dbUrl, String user, String password) {
         switch (daoType) {
             case HSQLDB:
-                return new HsqldbDao(dbUrl, user, password);
+                return new MssqlDao(dbUrl, user, password);
             default:
                 return null;
         }
@@ -17,7 +17,7 @@ public abstract class DaoFactory {
     public static Dao createInstance(DaoTypes daoType, String dbUrl, String user, String password) {
         switch (daoType) {
             case HSQLDB:
-                return new HsqldbDao(dbUrl, user, password);
+                return new MssqlDao(dbUrl, user, password);
             default:
                 return null;
         }

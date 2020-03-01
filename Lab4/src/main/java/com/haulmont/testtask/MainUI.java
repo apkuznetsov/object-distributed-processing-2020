@@ -1,7 +1,6 @@
 package com.haulmont.testtask;
 
 import com.haulmont.testtask.PharmacyDb.PharmacyDbDao;
-import com.haulmont.testtask.PharmacyDb.HsqldbDaos.HsqldbPharmacyDbDao;
 import com.haulmont.testtask.PharmacyDb.PharmacyDbDaoFactory;
 import com.haulmont.testtask.PharmacyUi.*;
 import com.vaadin.annotations.Theme;
