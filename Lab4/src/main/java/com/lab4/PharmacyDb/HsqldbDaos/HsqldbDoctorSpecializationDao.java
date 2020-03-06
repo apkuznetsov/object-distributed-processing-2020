@@ -1,6 +1,6 @@
 package com.lab4.PharmacyDb.HsqldbDaos;
 
-import com.lab4.Dao.MssqlDao;
+import com.lab4.Dao.HsqldbDao;
 import com.lab4.PharmacyDb.Daos.DoctorSpecializationDao;
 import com.lab4.PharmacyDb.Dtos.DoctorSpecialization;
 
@@ -12,8 +12,8 @@ import java.util.List;
 import static com.lab4.Dao.SqlHelper.*;
 import static com.lab4.PharmacyDb.PharmacyDbDao.DOCTOR_SPECIALIZATION;
 
-public class MssqlDoctorSpecializationDao extends MssqlDao implements DoctorSpecializationDao {
-    public MssqlDoctorSpecializationDao(String dbUrl, String user, String password) {
+public class HsqldbDoctorSpecializationDao extends HsqldbDao implements DoctorSpecializationDao {
+    public HsqldbDoctorSpecializationDao(String dbUrl, String user, String password) {
         super(dbUrl, user, password);
     }
 

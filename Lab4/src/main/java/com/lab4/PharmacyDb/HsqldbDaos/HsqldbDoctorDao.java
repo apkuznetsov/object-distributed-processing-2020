@@ -1,6 +1,6 @@
 package com.lab4.PharmacyDb.HsqldbDaos;
 
-import com.lab4.Dao.MssqlDao;
+import com.lab4.Dao.HsqldbDao;
 import com.lab4.Dao.SqlHelper;
 import com.lab4.PharmacyDb.Daos.DoctorDao;
 import com.lab4.PharmacyDb.Daos.MedicalPrescriptionDao;
@@ -16,8 +16,8 @@ import static com.lab4.Dao.SqlHelper.*;
 import static com.lab4.PharmacyDb.PharmacyDbDao.DOCTOR;
 import static com.lab4.PharmacyDb.PharmacyDbDao.MEDICAL_PRESCRIPTION;
 
-public class MssqlDoctorDao extends MssqlDao implements DoctorDao {
-    public MssqlDoctorDao(String dbUrl, String user, String password) {
+public class HsqldbDoctorDao extends HsqldbDao implements DoctorDao {
+    public HsqldbDoctorDao(String dbUrl, String user, String password) {
         super(dbUrl, user, password);
     }
 

@@ -1,6 +1,6 @@
 package com.lab4.PharmacyDb.HsqldbDaos;
 
-import com.lab4.Dao.MssqlDao;
+import com.lab4.Dao.HsqldbDao;
 import com.lab4.PharmacyDb.Daos.MedicalPrescriptionDao;
 import com.lab4.PharmacyDb.Dtos.MedicalPrescription;
 
@@ -12,8 +12,8 @@ import java.util.List;
 import static com.lab4.Dao.SqlHelper.*;
 import static com.lab4.PharmacyDb.PharmacyDbDao.MEDICAL_PRESCRIPTION;
 
-public class MssqlMedicalPrescriptionDao extends MssqlDao implements MedicalPrescriptionDao {
-    public MssqlMedicalPrescriptionDao(String dbUrl, String user, String password) {
+public class HsqldbMedicalPrescriptionDao extends HsqldbDao implements MedicalPrescriptionDao {
+    public HsqldbMedicalPrescriptionDao(String dbUrl, String user, String password) {
         super(dbUrl, user, password);
     }
 
