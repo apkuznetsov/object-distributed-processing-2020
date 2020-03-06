@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b69cfb-4e42-443d-8e9e-e3ee212b699d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/Dao/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/MainUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/Daos/PharmacyDbDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorSpecializationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbDoctorSpecializationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbMedicalPrescriptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbMedicalPrescriptionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPatientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/testtask/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lab4/sql-scripts/create-tables.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
