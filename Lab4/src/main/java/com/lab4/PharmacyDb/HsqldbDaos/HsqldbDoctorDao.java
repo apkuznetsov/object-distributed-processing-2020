@@ -6,6 +6,8 @@ import com.lab4.PharmacyDb.Daos.DoctorDao;
 import com.lab4.PharmacyDb.Daos.MedicalPrescriptionDao;
 import com.lab4.PharmacyDb.Dtos.Doctor;
 import com.lab4.PharmacyDb.Dtos.DoctorMedicalPrescriptionsNumber;
+import com.lab4.PharmacyDb.Dtos.DoctorSpecialization;
+import com.lab4.PharmacyDb.Dtos.DoctorWithSpecializationName;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,8 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static com.lab4.Dao.SqlHelper.*;
-import static com.lab4.PharmacyDb.PharmacyDbDao.DOCTOR;
-import static com.lab4.PharmacyDb.PharmacyDbDao.MEDICAL_PRESCRIPTION;
+import static com.lab4.PharmacyDb.PharmacyDbDao.*;
 
 public class HsqldbDoctorDao extends HsqldbDao implements DoctorDao {
     public HsqldbDoctorDao(String dbUrl, String user, String password) {
@@ -120,6 +121,38 @@ public class HsqldbDoctorDao extends HsqldbDao implements DoctorDao {
             doctors.add(doctor);
         }
 
+        return doctors;
+    }
+
+    @Override
+    public List<DoctorWithSpecializationName> getAllDoctorsWithSpecializationName() throws SQLException, ClassNotFoundException {
+        connect();
+
+        final String query = String.format("%s %s, %s, %s, %s, %s.%s " +
+                        "%s %s " +
+                        "%s %s " +
+                        "%s %s.%s = %s.%s",
+                SELECT, Doctor.ID, Doctor.FORENAME, Doctor.PATRONYMIC, Doctor.SURNAME, DOCTOR_SPECIALIZATION, DoctorSpecialization.NAME,
+                FROM, DOCTOR,
+                SqlHelper.JOIN, DOCTOR_SPECIALIZATION,
+                SqlHelper.ON, DOCTOR, "specialization_id", DOCTOR_SPECIALIZATION, DoctorSpecialization.ID);
+        ResultSet resultSet = executeQuery(query);
+
+        List<DoctorWithSpecializationName> doctors = new LinkedList<DoctorWithSpecializationName>();
+
+        DoctorWithSpecializationName doctor;
+        while (resultSet.next()) {
+            doctor = new DoctorWithSpecializationName(
+                    resultSet.getLong(Doctor.ID),
+                    resultSet.getString(Doctor.FORENAME),
+                    resultSet.getString(Doctor.PATRONYMIC),
+                    resultSet.getString(Doctor.SURNAME),
+                    resultSet.getString(DoctorSpecialization.NAME));
+
+            doctors.add(doctor);
+        }
+
+        disconnect();
         return doctors;
     }
 

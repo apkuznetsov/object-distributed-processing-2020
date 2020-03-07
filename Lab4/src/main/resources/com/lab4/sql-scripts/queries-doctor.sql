@@ -25,3 +25,8 @@ FROM doctor
 INNER JOIN medical_prescription
 ON doctor.id = medical_prescription.doctor_id
 GROUP BY doctor.id
+
+select id, forename, patronymic, surname, doctor_specialization.name
+from doctor
+join doctor_specialization
+on doctor.specialization_id = doctor_specialization.id;
