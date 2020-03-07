@@ -9,6 +9,7 @@ import com.lab4.PharmacyDb.Dtos.DoctorMedicalPrescriptionsNumber;
 import com.lab4.PharmacyDb.Dtos.DoctorSpecialization;
 import com.lab4.PharmacyDb.Dtos.DoctorWithSpecializationName;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
@@ -86,8 +87,10 @@ public class HsqldbDoctorDao extends HsqldbDao implements DoctorDao {
     public int deleteDoctor(long id) throws SQLException, ClassNotFoundException {
         connect();
 
-        final String query = String.format("%s %s %s %s %s = %s", DELETE, FROM, DOCTOR, WHERE, ID, Long.toString(id));
-        int changedRowsNum = executeUpdate(query);
+        final String query = "DELETE FROM doctor WHERE ID = ?";
+        PreparedStatement preparedStatement = getConnection().prepareStatement(query);
+        preparedStatement.setLong(1, id);
+        int changedRowsNum = preparedStatement.executeUpdate();
 
         disconnect();
         return changedRowsNum;
