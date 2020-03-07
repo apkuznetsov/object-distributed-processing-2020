@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63b69cfb-4e42-443d-8e9e-e3ee212b699d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lab4/sql-scripts/create-tables.sql" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab4/PharmacyDb/Dtos/DoctorWithSpecializationName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/0 create-tables.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/1 insert-doctor-specializations.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/2 insert-doctors.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/3 insert-patients.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/4 insert-medical-prescriptions-hsql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/queries-doctor.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/queries-medical-prescription.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lab4/sql-scripts/queries-patient.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lab4/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lab4/MainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lab4/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lab4/PharmacyDb/HsqldbDaos/HsqldbPharmacyDbDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/test-task.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdb.lck" beforeDir="false" afterPath="$PROJECT_DIR$/testdb.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdb.properties" beforeDir="false" afterPath="$PROJECT_DIR$/testdb.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +40,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1Ws44EOVqbtofH3otesqIwCIsCn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -62,17 +86,18 @@
       <recent name="D:\repos\test-task\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lab4.PharmacyDb.Dtos" />
       <recent name="com.haulmont.testtask.PharmacyUi" />
       <recent name="com.haulmont.testtask.PharmacyDb.Dtos" />
       <recent name="com.haulmont.testtask.PharmacyUi.Windows" />
       <recent name="com.haulmont.testtask.PharmacyDb.HsqldbDaos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repos\object-distributed-processing-2020\Lab4\src\main\resources\com\lab4\sql-scripts" />
       <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\sql-scripts" />
       <recent name="D:\repos\test-task\src\main\resources\com\haulmont\testtask\" />
       <recent name="D:\repos\test-task\sql-scripts\doctor-specialization" />
       <recent name="D:\repos\test-task\sql-scripts\medical-prescription" />
-      <recent name="D:\repos\test-task\sql-scripts\patient" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -185,14 +210,35 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="659" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582382431694">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="-1261" y="-91" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583565802170">
+      <screen x="-1920" y="-91" width="1920" height="1050" />
     </state>
+    <state x="-1261" y="-91" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1280.690/-1920.-91.1920.1050@-1920.-91.1920.1050" timestamp="1583565802170" />
     <state x="659" y="30" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1582382431694" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1583565273988">
+      <screen x="-1920" y="-91" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.30.1280.690/-1920.-91.1920.1050@-1920.-91.1920.1050" timestamp="1583565273988" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1583565273988">
+      <screen x="-1920" y="-91" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.30.1280.690/-1920.-91.1920.1050@-1920.-91.1920.1050" timestamp="1583565273988" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1583565273988">
+      <screen x="-1920" y="-91" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.30.1280.690/-1920.-91.1920.1050@-1920.-91.1920.1050" timestamp="1583565273988" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1583565273988">
+      <screen x="-1920" y="-91" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.30.1280.690/-1920.-91.1920.1050@-1920.-91.1920.1050" timestamp="1583565273988" />
     <state x="489" y="193" key="SettingsEditor" timestamp="1582380723517">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="489" y="193" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1582380723517" />
+    <state x="-1264" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1583564746003">
+      <screen x="-1920" y="-91" width="1920" height="1050" />
+    </state>
+    <state x="-1264" y="257" key="com.intellij.ide.util.TipDialog/0.30.1280.690/-1920.-91.1920.1050@-1920.-91.1920.1050" timestamp="1583564746003" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

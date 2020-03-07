@@ -2,7 +2,6 @@ package com.lab4;
 
 import com.lab4.PharmacyDb.PharmacyDbDao;
 import com.lab4.PharmacyDb.PharmacyDbDaoFactory;
-import com.haulmont.testtask.PharmacyUi.*;
 import com.lab4.PharmacyUi.*;
 import com.vaadin.annotations.Theme;
 import com.vaadin.navigator.Navigator;

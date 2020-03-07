@@ -1,7 +1,6 @@
 package com.lab4.PharmacyDb.HsqldbDaos;
 
 import com.lab4.Dao.HsqldbDao;
-import com.haulmont.testtask.PharmacyDb.Daos.*;
 import com.lab4.PharmacyDb.Daos.DoctorDao;
 import com.lab4.PharmacyDb.Daos.DoctorSpecializationDao;
 import com.lab4.PharmacyDb.Daos.MedicalPrescriptionDao;
