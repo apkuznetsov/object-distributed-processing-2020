@@ -18,6 +18,7 @@ public class MainUI extends UI {
 
     private static final String PATIENT_VIEW = "Пациенты";
     private static final String DOCTOR_VIEW = "Врачи";
+    private static final String DOCTOR_WITH_SPECIALIZATION_NAME_VIEW = "Врачи и спец.";
     private static final String DOCTOR_SPECIALIZATIONS_VIEW = "Специализации";
     private static final String MEDICAL_PRESCRIPTIONS_VIEW = "Рецепты";
     public static final String STATISTICS_VIEW = "Статистика";
@@ -27,6 +28,7 @@ public class MainUI extends UI {
     private Label title;
     private Button patientViewBtn;
     private Button doctorViewBtn;
+    private Button doctorWithSpecializationNameViewBtn;
     private Button doctorSpecializationViewBtn;
     private Button medicalPrescriptionViewBtn;
     private VerticalLayout menu;
@@ -45,6 +47,10 @@ public class MainUI extends UI {
                 event -> getNavigator().navigateTo(DOCTOR_VIEW));
         doctorViewBtn.addStyleName(ValoTheme.MENU_ITEM);
 
+        doctorWithSpecializationNameViewBtn = new Button(DOCTOR_WITH_SPECIALIZATION_NAME_VIEW,
+                event -> getNavigator().navigateTo(DOCTOR_WITH_SPECIALIZATION_NAME_VIEW));
+        doctorWithSpecializationNameViewBtn.addStyleName(ValoTheme.MENU_ITEM);
+
         doctorSpecializationViewBtn = new Button(DOCTOR_SPECIALIZATIONS_VIEW,
                 event -> getNavigator().navigateTo(DOCTOR_SPECIALIZATIONS_VIEW));
         doctorSpecializationViewBtn.addStyleName(ValoTheme.MENU_ITEM);
@@ -56,6 +62,7 @@ public class MainUI extends UI {
         menu = new VerticalLayout(title,
                 patientViewBtn,
                 doctorViewBtn,
+                doctorWithSpecializationNameViewBtn,
                 doctorSpecializationViewBtn,
                 medicalPrescriptionViewBtn);
         menu.addStyleName(ValoTheme.MENU_ROOT);
@@ -73,6 +80,7 @@ public class MainUI extends UI {
         navigator.addView("", new DefaultView());
         navigator.addView(PATIENT_VIEW, new PatientView(this));
         navigator.addView(DOCTOR_VIEW, new DoctorView(this));
+        navigator.addView(DOCTOR_WITH_SPECIALIZATION_NAME_VIEW, new DoctorWithSpecializationNameView());
         navigator.addView(DOCTOR_SPECIALIZATIONS_VIEW, new DoctorSpecializationView(this));
         navigator.addView(MEDICAL_PRESCRIPTIONS_VIEW, new MedicalPrescriptionView(this));
         navigator.addView(STATISTICS_VIEW, new DoctorsMedicalPrescriptionsNumbersView());
