@@ -29,3 +29,6 @@ hs_err_pid*
 Lab4/.idea/libraries/
 Lab4/.idea/workspace.xml
 Lab4/target/
+
+Lab4/testdb.properties
+Lab4/testdb.lck
