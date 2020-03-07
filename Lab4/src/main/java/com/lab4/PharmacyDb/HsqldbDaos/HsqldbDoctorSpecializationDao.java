@@ -4,6 +4,7 @@ import com.lab4.Dao.HsqldbDao;
 import com.lab4.PharmacyDb.Daos.DoctorSpecializationDao;
 import com.lab4.PharmacyDb.Dtos.DoctorSpecialization;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
@@ -72,8 +73,10 @@ public class HsqldbDoctorSpecializationDao extends HsqldbDao implements DoctorSp
     public int deleteDoctorSpecialization(long id) throws SQLException, ClassNotFoundException {
         connect();
 
-        final String query = String.format("%s %s %s %s %s = %s", DELETE, FROM, DOCTOR_SPECIALIZATION, WHERE, ID, Long.toString(id));
-        int changedRowsNum = executeUpdate(query);
+        final String query = "DELETE FROM doctor_specialization WHERE ID = ?";
+        PreparedStatement preparedStatement = getConnection().prepareStatement(query);
+        preparedStatement.setLong(1, id);
+        int changedRowsNum = preparedStatement.executeUpdate();
 
         disconnect();
         return changedRowsNum;

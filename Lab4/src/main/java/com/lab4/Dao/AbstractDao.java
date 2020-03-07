@@ -18,6 +18,10 @@ public abstract class AbstractDao implements Dao {
         this.password = password;
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
+
     public void connect() throws ClassNotFoundException, SQLException {
         Class.forName(jdbcDriver);
         connection = DriverManager.getConnection(dbUrl, user, password);
