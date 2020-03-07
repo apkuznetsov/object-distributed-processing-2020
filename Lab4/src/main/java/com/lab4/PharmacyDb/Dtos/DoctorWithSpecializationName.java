@@ -1,6 +1,8 @@
 package com.lab4.PharmacyDb.Dtos;
 
 public class DoctorWithSpecializationName {
+    public static final String SPECIALIZATION_NAME = "specializationName";
+
     private long id;
     private String forename;
     private String patronymic;

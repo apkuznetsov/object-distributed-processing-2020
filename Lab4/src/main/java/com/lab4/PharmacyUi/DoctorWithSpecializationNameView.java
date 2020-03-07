@@ -19,7 +19,7 @@ import static com.lab4.MainUI.pharmacyDbDao;
 public class DoctorWithSpecializationNameView extends VerticalLayout implements View {
     private DoctorDao doctorDao;
 
-    private Grid<Doctor> grid;
+    private Grid<DoctorWithSpecializationName> grid;
     private HorizontalLayout gridLayout;
 
     public DoctorWithSpecializationNameView() {
@@ -44,20 +44,20 @@ public class DoctorWithSpecializationNameView extends VerticalLayout implements 
                 Doctor.SURNAME,
                 Doctor.FORENAME,
                 Doctor.PATRONYMIC,
-                DoctorSpecialization.NAME);
+                DoctorWithSpecializationName.SPECIALIZATION_NAME);
 
         grid.getColumn(Doctor.ID).setCaption("Номер");
         grid.getColumn(Doctor.SURNAME).setCaption("Фамилия");
         grid.getColumn(Doctor.FORENAME).setCaption("Имя");
         grid.getColumn(Doctor.PATRONYMIC).setCaption("Отчество");
-        grid.getColumn(DoctorSpecialization.NAME).setCaption("Специализация");
+        grid.getColumn(DoctorWithSpecializationName.SPECIALIZATION_NAME).setCaption("Специализация");
 
         grid.setSizeFull();
     }
 
     public void updateDoctorsGrid() {
         try {
-            List<Doctor> doctors = doctorDao.getAllDoctorsWithSpecializationName();
+            List<DoctorWithSpecializationName> doctors = doctorDao.getAllDoctorsWithSpecializationName();
             grid.setItems(doctors);
         } catch (SQLException | ClassNotFoundException exc) {
             Notification.show(exc.getMessage());
