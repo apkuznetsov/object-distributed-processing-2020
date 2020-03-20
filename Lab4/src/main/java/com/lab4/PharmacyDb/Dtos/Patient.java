@@ -45,28 +45,28 @@ public class Patient {
         return forename;
     }
 
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
     public void setForename(String newForename) {
         forename = newForename;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
     }
 
     public void setPatronymic(String newPatronymic) {
         patronymic = newPatronymic;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
     public void setSurname(String newSurname) {
         surname = newSurname;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 
     public void setPhone(String newPhone) {

@@ -46,28 +46,28 @@ public class DoctorMedicalPrescriptionsNumber {
         return forename;
     }
 
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public long getPrescriptionsNumber() {
-        return prescriptionsNumber;
-    }
-
     public void setForename(String newForename) {
         forename = newForename;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
     }
 
     public void setPatronymic(String newPatronymic) {
         patronymic = newPatronymic;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
     public void setSurname(String newSurname) {
         surname = newSurname;
+    }
+
+    public long getPrescriptionsNumber() {
+        return prescriptionsNumber;
     }
 
     public void setPrescriptionsNumber(long newSpecializationId) {

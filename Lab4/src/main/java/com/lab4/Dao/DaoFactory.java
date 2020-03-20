@@ -1,8 +1,6 @@
 package com.lab4.Dao;
 
 public abstract class DaoFactory {
-    public enum DaoTypes {HSQLDB}
-
     private static DaoTypes daoType = DaoTypes.HSQLDB;
 
     public static Dao createInstance(String dbUrl, String user, String password) {
@@ -22,4 +20,6 @@ public abstract class DaoFactory {
                 return null;
         }
     }
+
+    public enum DaoTypes {HSQLDB}
 }

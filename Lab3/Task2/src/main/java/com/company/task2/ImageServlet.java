@@ -1,22 +1,20 @@
 package com.company.task2;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Random;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.Random;
 
 public class ImageServlet extends HttpServlet {
 
     private static final String IMAGE_CONTENT_TYPE = "image/jpeg";
-    
+
     private static final int WIDTH = 640;
     private static final int HEIGHT = 120;
 
@@ -30,7 +28,7 @@ public class ImageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType(IMAGE_CONTENT_TYPE);
-        
+
         try (ServletOutputStream out = response.getOutputStream()) {
             BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
 

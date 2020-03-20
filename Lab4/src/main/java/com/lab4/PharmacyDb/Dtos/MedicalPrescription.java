@@ -70,44 +70,44 @@ public class MedicalPrescription {
         return description;
     }
 
-    public long getPatientId() {
-        return patientId;
-    }
-
-    public long getDoctorId() {
-        return doctorId;
-    }
-
-    public Timestamp getCreationDate() {
-        return creationDate;
-    }
-
-    public Timestamp getValidityDate() {
-        return validityDate;
-    }
-
-    public byte getPriority() {
-        return priority;
-    }
-
     public void setDescription(String newDescription) {
         description = newDescription;
+    }
+
+    public long getPatientId() {
+        return patientId;
     }
 
     public void setPatientId(long newPatientId) {
         patientId = newPatientId;
     }
 
+    public long getDoctorId() {
+        return doctorId;
+    }
+
     public void setDoctorId(long newDoctorId) {
         doctorId = newDoctorId;
+    }
+
+    public Timestamp getCreationDate() {
+        return creationDate;
     }
 
     public void setCreationDate(Timestamp newCreationDate) {
         creationDate = newCreationDate;
     }
 
+    public Timestamp getValidityDate() {
+        return validityDate;
+    }
+
     public void setValidityDate(Timestamp newValidityDate) {
         validityDate = newValidityDate;
+    }
+
+    public byte getPriority() {
+        return priority;
     }
 
     public void setPriority(byte newPriority) {

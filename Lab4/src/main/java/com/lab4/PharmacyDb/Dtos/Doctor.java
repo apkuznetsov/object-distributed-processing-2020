@@ -45,28 +45,28 @@ public class Doctor {
         return forename;
     }
 
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public long getSpecializationId() {
-        return specializationId;
-    }
-
     public void setForename(String newForename) {
         forename = newForename;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
     }
 
     public void setPatronymic(String newPatronymic) {
         patronymic = newPatronymic;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
     public void setSurname(String newSurname) {
         surname = newSurname;
+    }
+
+    public long getSpecializationId() {
+        return specializationId;
     }
 
     public void setSpecializationId(long newSpecializationId) {

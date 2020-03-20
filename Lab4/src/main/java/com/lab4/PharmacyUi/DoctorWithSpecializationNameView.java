@@ -2,7 +2,6 @@ package com.lab4.PharmacyUi;
 
 import com.lab4.PharmacyDb.Daos.DoctorDao;
 import com.lab4.PharmacyDb.Dtos.Doctor;
-import com.lab4.PharmacyDb.Dtos.DoctorSpecialization;
 import com.lab4.PharmacyDb.Dtos.DoctorWithSpecializationName;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;

@@ -11,18 +11,16 @@ import com.vaadin.ui.themes.ValoTheme;
 
 @Theme(ValoTheme.THEME_NAME)
 public class MainUI extends UI {
+    public static final String STATISTICS_VIEW = "Статистика";
     private static final String DB_URL = "jdbc:hsqldb:file:testdb";
     private static final String USER = "SA";
     private static final String PASSWORD = "";
-    public static PharmacyDbDao pharmacyDbDao = PharmacyDbDaoFactory.createInstance(DB_URL, USER, PASSWORD);
-
     private static final String PATIENT_VIEW = "Пациенты";
     private static final String DOCTOR_VIEW = "Врачи";
     private static final String DOCTOR_WITH_SPECIALIZATION_NAME_VIEW = "Врачи и спец.";
     private static final String DOCTOR_SPECIALIZATIONS_VIEW = "Специализации";
     private static final String MEDICAL_PRESCRIPTIONS_VIEW = "Рецепты";
-    public static final String STATISTICS_VIEW = "Статистика";
-
+    public static PharmacyDbDao pharmacyDbDao = PharmacyDbDaoFactory.createInstance(DB_URL, USER, PASSWORD);
     private HorizontalLayout mainLayout;
 
     private Label title;
