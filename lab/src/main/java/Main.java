@@ -8,6 +8,7 @@ import DoctorDb.HsqldbDaos.HsqldbDoctorDbDao;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     private static final String DB_URL = "jdbc:hsqldb:file:testdb";
@@ -18,9 +19,28 @@ public class Main {
     private static final DoctorSpecializationDao specDao = dbDao.getDoctorSpecializationDao();
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        System.out.println("1 -- список врачей");
+        Scanner scan = new Scanner(System.in);
+        String menuItem;
+
+        while (true) {
+            System.out.println("1 -- Список врачей (эквисоединение Врач + Специальность)\n" +
+                    "2 -- Список специальностей\n" +
+                    "--------------------------------------------------------\n" +
+                    "Ваш выбор ...");
+            menuItem = scan.nextLine();
+
+            try {
+                if ("1".equals(menuItem)) {
         printDocsWithSpecs();
+                } else if ("2".equals(menuItem)) {
         printSpecs();
+    }
+            } catch (Exception exc) {
+                exc.printStackTrace();
+                continue;
+            }
+            System.out.println();
+        }
     }
 
     private static void printDocs() throws SQLException, ClassNotFoundException {
