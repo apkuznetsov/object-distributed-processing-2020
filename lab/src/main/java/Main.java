@@ -26,15 +26,19 @@ public class Main {
             System.out.println("1 -- Список врачей (эквисоединение Врач + Специальность)\n" +
                     "2 -- Список специальностей\n" +
                     "--------------------------------------------------------\n" +
+                    "3 -- Добавить врача\n" +
                     "Ваш выбор ...");
             menuItem = scan.nextLine();
 
             try {
                 if ("1".equals(menuItem)) {
-        printDocsWithSpecs();
+                    printDocsWithSpecs();
                 } else if ("2".equals(menuItem)) {
-        printSpecs();
-    }
+                    printSpecs();
+                } else if ("3".equals(menuItem)) {
+                    printInsertDoc();
+                    printDocs();
+                }
             } catch (Exception exc) {
                 exc.printStackTrace();
                 continue;
@@ -80,5 +84,27 @@ public class Main {
                     s.getId(),
                     s.getName());
         }
+    }
+
+    private static void printInsertDoc() throws SQLException, ClassNotFoundException {
+        Scanner scan = new Scanner(System.in);
+
+        String forename;
+        String patronymic;
+        String surname;
+        String specializationId;
+
+        System.out.println("Добавление врача:");
+        System.out.println("Фамилия ... ");
+        surname = scan.nextLine();
+        System.out.println("Имя ... ");
+        forename = scan.nextLine();
+        System.out.println("Отчество ... ");
+        patronymic = scan.nextLine();
+        System.out.println("Номер специальности ... ");
+        specializationId = scan.nextLine();
+
+        Doctor d = new Doctor(forename, patronymic, surname, Long.parseLong(specializationId));
+        docDao.insertDoctor(d);
     }
 }
