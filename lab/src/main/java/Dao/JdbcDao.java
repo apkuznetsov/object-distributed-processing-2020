@@ -2,7 +2,7 @@ package Dao;
 
 import java.sql.*;
 
-public abstract class AbstractDao implements Dao {
+public abstract class JdbcDao implements Dao {
     protected String jdbcDriver = null;
     protected String dbUrl = null;
 
@@ -11,7 +11,7 @@ public abstract class AbstractDao implements Dao {
 
     private Connection connection = null;
 
-    protected AbstractDao(String jdbcDriver, String dbUrl, String user, String password) {
+    protected JdbcDao(String jdbcDriver, String dbUrl, String user, String password) {
         this.jdbcDriver = jdbcDriver;
         this.dbUrl = dbUrl;
         this.user = user;
