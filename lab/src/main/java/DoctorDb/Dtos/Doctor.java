@@ -5,7 +5,7 @@ public class Doctor {
     public static final String FORENAME = "forename";
     public static final String PATRONYMIC = "patronymic";
     public static final String SURNAME = "surname";
-    public static final String SPECIALIZATION_ID = "specializationId";
+    public static final String SPECIALIZATION_ID = "specialization_id";
 
     private long id;
     private String forename;
