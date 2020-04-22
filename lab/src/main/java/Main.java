@@ -1,6 +1,8 @@
 import DoctorDb.Daos.DoctorDao;
+import DoctorDb.Daos.DoctorSpecializationDao;
 import DoctorDb.DoctorDbDao;
 import DoctorDb.Dtos.Doctor;
+import DoctorDb.Dtos.DoctorSpecialization;
 import DoctorDb.Dtos.DoctorWithSpecializationName;
 import DoctorDb.HsqldbDaos.HsqldbDoctorDbDao;
 
@@ -13,10 +15,12 @@ public class Main {
     private static final String PASSWORD = "";
     private static final DoctorDbDao dbDao = new HsqldbDoctorDbDao(DB_URL, USER, PASSWORD);
     private static final DoctorDao docDao = dbDao.getDoctorDao();
+    private static final DoctorSpecializationDao specDao = dbDao.getDoctorSpecializationDao();
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         System.out.println("1 -- список врачей");
         printDocsWithSpecs();
+        printSpecs();
     }
 
     private static void printDocs() throws SQLException, ClassNotFoundException {
@@ -44,6 +48,17 @@ public class Main {
                     d.getForename(),
                     d.getPatronymic(),
                     d.getSpecializationName());
+        }
+    }
+
+    private static void printSpecs() throws SQLException, ClassNotFoundException {
+        List<DoctorSpecialization> specs = specDao.getAllDoctorSpecializations();
+
+        System.out.printf("%-5s %-20s\n", "№", "Специализации");
+        for (DoctorSpecialization s : specs) {
+            System.out.printf("%-5s %-20s\n",
+                    s.getId(),
+                    s.getName());
         }
     }
 }
