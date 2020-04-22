@@ -29,7 +29,11 @@ public class Main {
                     "3 -- Добавить врача\n" +
                     "4 -- Добавить специальность\n" +
                     "--------------------------------------------------------\n" +
-                    "5 -- Удалить специальность\n" +
+                    "5 -- Удалить врача\n" +
+                    "6 -- Удалить специальность\n" +
+                    "--------------------------------------------------------\n" +
+                    "0 -- Выйти\n" +
+                    "--------------------------------------------------------\n" +
                     "Ваш выбор ...");
             menuItem = scan.nextLine();
 
@@ -45,9 +49,17 @@ public class Main {
                     printInsertSpec();
                     printSpecs();
                 } else if ("5".equals(menuItem)) {
-                    printSpecs(); System.out.println();
+                    printDocs();
+                    System.out.println();
+                    printDeleteDoc();
+                    printDocs();
+                } else if ("6".equals(menuItem)) {
+                    printSpecs();
+                    System.out.println();
                     printDeleteSpec();
                     printSpecs();
+                } else if ("0".equals(menuItem)) {
+                    break;
                 }
             } catch (Exception exc) {
                 exc.printStackTrace();
@@ -131,6 +143,18 @@ public class Main {
         DoctorSpecialization s = new DoctorSpecialization(name);
         specDao.insertDoctorSpecialization(s);
         System.out.println("Специальность добавлена");
+    }
+
+    private static void printDeleteDoc() throws SQLException, ClassNotFoundException {
+        Scanner scan = new Scanner(System.in);
+
+        String id;
+        System.out.println("Удаление врача:");
+        System.out.println("Номер ... ");
+        id = scan.nextLine();
+
+        docDao.deleteDoctor(Long.parseLong(id));
+        System.out.println("Врач удалён");
     }
 
     private static void printDeleteSpec() throws SQLException, ClassNotFoundException {
