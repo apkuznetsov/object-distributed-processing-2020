@@ -27,6 +27,8 @@ public class Main {
                     "2 -- Список специальностей\n" +
                     "--------------------------------------------------------\n" +
                     "3 -- Добавить врача\n" +
+                    "4 -- Добавить специальность\n" +
+                    "--------------------------------------------------------\n" +
                     "Ваш выбор ...");
             menuItem = scan.nextLine();
 
@@ -38,6 +40,9 @@ public class Main {
                 } else if ("3".equals(menuItem)) {
                     printInsertDoc();
                     printDocs();
+                } else if ("4".equals(menuItem)) {
+                    printInsertSpec();
+                    printSpecs();
                 }
             } catch (Exception exc) {
                 exc.printStackTrace();
@@ -106,5 +111,18 @@ public class Main {
 
         Doctor d = new Doctor(forename, patronymic, surname, Long.parseLong(specializationId));
         docDao.insertDoctor(d);
+    }
+
+    private static void printInsertSpec() throws SQLException, ClassNotFoundException {
+        Scanner scan = new Scanner(System.in);
+
+        String name;
+
+        System.out.println("Добавление специальности:");
+        System.out.println("Название ... ");
+        name = scan.nextLine();
+
+        DoctorSpecialization s = new DoctorSpecialization(name);
+        specDao.insertDoctorSpecialization(s);
     }
 }
