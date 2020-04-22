@@ -1,4 +1,4 @@
-package Db.Dtos;
+package DoctorDb.Dtos;
 
 public class DoctorSpecialization {
     public static final String ID = "id";

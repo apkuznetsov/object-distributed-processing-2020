@@ -1,8 +1,7 @@
-package Db.Daos;
+package DoctorDb.Daos;
 
-import com.lab4.PharmacyDb.Dtos.Doctor;
-import com.lab4.PharmacyDb.Dtos.DoctorMedicalPrescriptionsNumber;
-import com.lab4.PharmacyDb.Dtos.DoctorWithSpecializationName;
+import DoctorDb.Dtos.Doctor;
+import DoctorDb.Dtos.DoctorWithSpecializationName;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -21,6 +20,4 @@ public interface DoctorDao {
     public List<DoctorWithSpecializationName> getAllDoctorsWithSpecializationName() throws SQLException, ClassNotFoundException;
 
     List<Doctor> getDoctorsBySurname(String surname) throws SQLException, ClassNotFoundException;
-
-    List<DoctorMedicalPrescriptionsNumber> getAllDoctorsMedicalPrescriptionsNumbers() throws SQLException, ClassNotFoundException;
 }

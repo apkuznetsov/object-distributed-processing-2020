@@ -1,4 +1,4 @@
-package Db.Dtos;
+package DoctorDb.Dtos;
 
 public class Doctor {
     public static final String ID = "id";

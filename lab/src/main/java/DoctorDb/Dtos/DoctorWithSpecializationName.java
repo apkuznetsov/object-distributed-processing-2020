@@ -1,4 +1,4 @@
-package Db.Dtos;
+package DoctorDb.Dtos;
 
 public class DoctorWithSpecializationName {
     public static final String SPECIALIZATION_NAME = "specializationName";

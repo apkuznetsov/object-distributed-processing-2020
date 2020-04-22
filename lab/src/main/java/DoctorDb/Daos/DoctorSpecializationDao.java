@@ -1,6 +1,6 @@
-package Db.Daos;
+package DoctorDb.Daos;
 
-import com.lab4.PharmacyDb.Dtos.DoctorSpecialization;
+import DoctorDb.Dtos.DoctorSpecialization;
 
 import java.sql.SQLException;
 import java.util.List;

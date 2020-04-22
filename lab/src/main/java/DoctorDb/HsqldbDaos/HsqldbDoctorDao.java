@@ -1,11 +1,11 @@
-package Db.HsqldbDaos;
+package DoctorDb.HsqldbDaos;
 
 import Dao.HsqldbDao;
-import Db.Daos.DoctorDao;
-import Db.Dtos.Doctor;
-import Db.Dtos.DoctorSpecialization;
-import Db.Dtos.DoctorWithSpecializationName;
-import Db.SqlHelper;
+import DoctorDb.Daos.DoctorDao;
+import DoctorDb.Dtos.Doctor;
+import DoctorDb.Dtos.DoctorSpecialization;
+import DoctorDb.Dtos.DoctorWithSpecializationName;
+import Dao.SqlHelper;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,10 +13,10 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-import static Db.DbDao.DOCTOR;
-import static Db.DbDao.DOCTOR_SPECIALIZATION;
-import static Db.Dtos.Doctor.*;
-import static Db.SqlHelper.*;
+import static DoctorDb.DoctorDbDao.DOCTOR;
+import static DoctorDb.DoctorDbDao.DOCTOR_SPECIALIZATION;
+import static DoctorDb.Dtos.Doctor.*;
+import static Dao.SqlHelper.*;
 
 
 public class HsqldbDoctorDao extends HsqldbDao implements DoctorDao {

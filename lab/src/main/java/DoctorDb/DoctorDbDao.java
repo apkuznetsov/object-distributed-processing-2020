@@ -1,9 +1,9 @@
-package Db;
+package DoctorDb;
 
-import Db.Daos.DoctorDao;
-import Db.Daos.DoctorSpecializationDao;
+import DoctorDb.Daos.DoctorDao;
+import DoctorDb.Daos.DoctorSpecializationDao;
 
-public interface DbDao {
+public interface DoctorDbDao {
     String DOCTOR = "doctor";
     String DOCTOR_SPECIALIZATION = "doctor_specialization";
 
