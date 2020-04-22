@@ -33,6 +33,3 @@ Lab4/target/
 lab/.idea/uiDesigner.xml
 lab/target/classes/META-INF/lab.kotlin_module
 
-lab/testdb.lck
-lab/testdb.properties
-lab/testdb.script
